@@ -11,4 +11,8 @@ Rails.application.routes.draw do
 #              PUT    /articles/:id(.:format)      articles#update
 #              DELETE /articles/:id(.:format)      articles#destroy
   resources :articles
+
+  get 'signup', to: 'users#new'
+  # post 'user', to: 'user#create'
+  resources :users, except: [:new]
 end
