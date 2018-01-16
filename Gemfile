@@ -15,8 +15,12 @@ gem 'sass-rails', '~> 5.0'
 gem 'uglifier', '>= 1.3.0'
 # See https://github.com/rails/execjs#readme for more supported runtimes
 # gem 'therubyracer', platforms: :ruby
+
+
 # Use Bootstrap
 gem 'bootstrap', '~> 4.0.0.beta3'
+gem 'will_paginate', '~> 3.1.0'
+gem 'bootstrap-will_paginate'
 # Use Jquery
 gem 'jquery-rails'
 # Use CoffeeScript for .coffee assets and views
