@@ -1,0 +1,23 @@
+<h1 align="center">
+  Listing all articles
+</h1>
+<div class="row">
+  <div class="col-12">
+    <div class="card-deck">
+      <% @users.each do |user| %>
+
+        <div class="card">
+          <%= link_to gravatar_for(user), user_path(user), class: 'card-img-top' %>
+          
+          <div class="card-body">
+            
+            <h5 class="card-title"><%= link_to user.username, user_path(user) %></h5>
+              <small class="text-muted"><%= pluralize(user.articles.count,"articles") if user.articles %></small>
+          </div>
+       
+        </div>
+        <% end %>
+    </div>
+
+  </div>
+</div>
