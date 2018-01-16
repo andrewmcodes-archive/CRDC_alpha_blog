@@ -13,6 +13,9 @@
           </div>
           <div class="card-body">
               <%= truncate(article.description, length: 100) %>
+              <small>Created by: <%= article.user.username if article.user %>,
+              last update <%= time_ago_in_words(article.updated_at) %> ago</small>
+              
           </div>
           <div class="card-footer">
             <%= link_to "Edit this article", edit_article_path(article), class: "btn btn-xs btn-primary" %>
