@@ -25,6 +25,77 @@
 .container {
   padding-top: 80px;
 }
+
+.form-a {
+  background: #ff9966;
+  /* fallback for old browsers */
+  background: -webkit-linear-gradient(to right, #ff5e62, #ff9966);
+  /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(to right, #ff5e62, #ff9966);
+  /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+  min-height: 85vh;
+  margin: 0;
+  width: 100%;
+  overflow: hidden;
+  .form-a-card {
+    background: #fff;
+    margin-top: 120px;
+    padding: 1em 2em;
+  }
+}
+
+.form-b {
+  background: #ff9966;
+  /* fallback for old browsers */
+  background: -webkit-linear-gradient(to right, #ff5e62, #ff9966);
+  /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(to right, #ff5e62, #ff9966);
+  /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+  min-height: 85vh;
+  height: 100%; 
+  margin: 0;
+  width: 100%;
+  // overflow: hidden;
+  .form-b-card {
+    background: #fff;
+    margin: 120px auto 80px auto;
+    padding: 1em 2em;
+  
+  }
+}
+.show-articles {
+  background: #ff9966;
+  /* fallback for old browsers */
+
+  background: -webkit-linear-gradient(to right, #ff5e62, #ff9966);
+  /* Chrome 10-25, Safari 5.1-6 */
+
+  background: linear-gradient(to right, #ff5e62, #ff9966);
+  /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+  .show-articles-row {
+    padding: 8em 4em;
+  }
+}
+.articles-list {
+    background: #ff9966;
+    /* fallback for old browsers */
+
+    background: -webkit-linear-gradient(to right, #ff5e62, #ff9966);
+    /* Chrome 10-25, Safari 5.1-6 */
+
+    background: linear-gradient(to right, #ff5e62, #ff9966);
+    /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    > .row{
+      padding-top:120px;
+    }
+    .articles-list-cards {
+        margin: 40px auto 40px auto;
+        padding: 4em 2em;
+        .card {
+          margin-bottom: 1em;
+        }
+    }
+}
 footer {
   // position: absolute;
   // bottom: 0;
@@ -32,7 +103,7 @@ footer {
   
   .nav {
        background: #fff;
-       padding-bottom: 24px;
+       padding: 24px;
   }
  
 }

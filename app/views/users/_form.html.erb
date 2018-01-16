@@ -1,6 +1,5 @@
 <%= render 'shared/errors', obj: @user %>
-  <div class="row">
-    <div class="col-sm-6 offset-sm-3">
+
       <%= form_for @user do |f| %>
         <div class="form-group">
           <label for="title">
@@ -26,5 +25,4 @@
           <%= link_to "Cancel", articles_path, class:"btn btn-danger" %>
             <% end %>
 
-    </div>
-  </div>
+   
