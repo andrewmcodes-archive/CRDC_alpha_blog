@@ -3,6 +3,19 @@
 // Custom bootstrap variables must be set or imported *before* bootstrap.
 @import "bootstrap";
 
+@mixin gradient--color($primary, $secondary) {
+      background: $primary;
+      /* fallback for old browsers */
+
+      background: -webkit-linear-gradient(to right, $primary, $secondary);
+      /* Chrome 10-25, Safari 5.1-6 */
+
+      background: linear-gradient(to right, $primary, $secondary);
+      /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+}
+
+$color__dark: #343a40;
+
 .jumbotron {
   background-image: asset-url('jumbotron.jpg');
   background-size: cover;
@@ -27,12 +40,7 @@
 }
 
 .form-a {
-  background: #ff9966;
-  /* fallback for old browsers */
-  background: -webkit-linear-gradient(to right, #ff5e62, #ff9966);
-  /* Chrome 10-25, Safari 5.1-6 */
-  background: linear-gradient(to right, #ff5e62, #ff9966);
-  /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+@include gradient--color(#ff5e26, #ff9966);
   min-height: 85vh;
   margin: 0;
   width: 100%;
@@ -48,12 +56,7 @@
 }
 
 .form-b {
-  background: #ff9966;
-  /* fallback for old browsers */
-  background: -webkit-linear-gradient(to right, #ff5e62, #ff9966);
-  /* Chrome 10-25, Safari 5.1-6 */
-  background: linear-gradient(to right, #ff5e62, #ff9966);
-  /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+@include gradient--color(#ff5e26, #ff9966);
   min-height: 85vh;
   height: 100%; 
   margin: 0;
@@ -67,27 +70,13 @@
   }
 }
 .show-articles {
-  background: #ff9966;
-  /* fallback for old browsers */
-
-  background: -webkit-linear-gradient(to right, #ff5e62, #ff9966);
-  /* Chrome 10-25, Safari 5.1-6 */
-
-  background: linear-gradient(to right, #ff5e62, #ff9966);
-  /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+@include gradient--color(#ff5e26, #ff9966);
   .show-articles-row {
     padding: 8em 4em;
   }
 }
 .articles-list {
-    background: #ff9966;
-    /* fallback for old browsers */
-
-    background: -webkit-linear-gradient(to right, #ff5e62, #ff9966);
-    /* Chrome 10-25, Safari 5.1-6 */
-
-    background: linear-gradient(to right, #ff5e62, #ff9966);
-    /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+@include gradient--color(#ff5e26, #ff9966);
     > .row{
       padding-top:120px;
     }
@@ -100,13 +89,41 @@
     }
 }
 footer {
-  // position: absolute;
-  // bottom: 0;
-  // width: 100%;
+ padding: 24px;
+ text-align: center;
+ color: #ffffff;
+}
+
+.create__form {
+  @include gradient--color(#ff5e26, #ff9966);
+  min-height: 85vh;
+  margin: 0;
+  width: 100%;
+  overflow: hidden;
   
-  .nav {
-       background: #fff;
-       padding: 24px;
+    .article--create__form {
+      h1 {
+        color: $color__dark;
+      }
+    background: #fff;
+    margin: 120px auto 80px auto;
+    padding: 1em 2em;
   }
- 
+  
+}
+
+.edit__form {
+  @include gradient--color(#ff5e26, #ff9966);
+  min-height: 85vh;
+  margin: 0;
+  width: 100%;
+  overflow: hidden;
+  .article--edit__form {
+    h1 {
+      color: $color__dark;
+    }
+    background: #fff;
+    margin: 120px auto 80px auto;
+    padding: 1em 2em;
+  }
 }
