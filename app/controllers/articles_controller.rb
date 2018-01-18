@@ -4,6 +4,7 @@ class ArticlesController < ApplicationController
   # Except for index, and show, there must be a logged in user
   before_action :require_user, except: [:index, :show]
   before_action :require_same_user, only: [:edit, :update, :destroy]
+  
   def index
     @articles = Article.paginate(:page => params[:page], :per_page => 30)
   end
