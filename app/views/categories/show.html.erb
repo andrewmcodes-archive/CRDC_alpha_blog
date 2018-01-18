@@ -1,0 +1,18 @@
+<div class="container-fluid articles-list">
+  <div class="row">
+    <div class="col-12 ">
+      <h1 align="center">
+        <%= "Category: " + @category.name %>
+      </h1>
+      <div align="center">
+        <%= will_paginate(@category_articles, :renderer => WillPaginate::ActionView::Bootstrap4LinkRenderer, class: 'justify-content-center') %>
+
+      </div>
+      <%= render 'articles/article', obj: @category_articles %>
+        <div align="center">
+          <%= will_paginate(@category_articles, :renderer => WillPaginate::ActionView::Bootstrap4LinkRenderer, class: 'justify-content-center') %>
+
+        </div>
+    </div>
+  </div>
+</div>
