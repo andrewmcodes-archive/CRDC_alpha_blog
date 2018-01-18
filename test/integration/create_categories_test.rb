@@ -16,4 +16,20 @@ class CreateCategoriesTest < ActionDispatch::IntegrationTest
     # Index page should have sports displayed on page
     assert_match 'sports', response.body
   end
+
+  test 'invalid category submission results in failure' do
+    # Go to new category path
+    get new_category_path
+    # Getting new category
+    assert_template 'categories/new'
+    # Post to new form with new category 'sports'
+    assert_no_difference 'Category.count' do
+      post categories_path, params: { category: { name: ' ' }}
+    end
+    # Redirect to index page
+    assert_template 'categories/new'
+    # Index page should have sports displayed on page
+    assert_select 'div.card-header'
+    assert_select 'div.card-body'
+  end
 end

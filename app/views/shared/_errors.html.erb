@@ -5,6 +5,7 @@
         <div class="card-header text-white bg-danger">
           <%= pluralize(obj.errors.count, "error") %> errors prohibited this article from being saved
         </div>
+        <div class="card-body">
         <ul class="list-group list-group-flush">
           <% obj.errors.full_messages.each do |msg| %>
             <li class="list-group-item">
@@ -12,6 +13,7 @@
             </li>
             <% end %>
         </ul>
+        </div>
       </div>
     </div>
   </div>
