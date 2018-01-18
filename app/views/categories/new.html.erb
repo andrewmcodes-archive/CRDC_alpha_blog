@@ -1,0 +1,19 @@
+<div class="container-fluid form-b">
+  <div class="row">
+    <div class="col-sm-6 offset-sm-3 form-b-card">
+      <h1 align="center">Create new category</h1>
+      <%= render 'shared/errors', obj: @category %>
+        <%= form_for @category do |f| %>
+          <div class="form-group">
+            <label for="title">
+            <%= f.label :name %>
+          </label>
+            <%= f.text_field :name, class:"form-control", id:"name", placeholder:"Category name"%>
+          </div>
+          
+          <%= f.submit class: "btn btn-primary" %>
+            <%= link_to "Cancel", articles_path, class:"btn btn-danger" %>
+              <% end %>
+    </div>
+  </div>
+</div>
