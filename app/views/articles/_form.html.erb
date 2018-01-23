@@ -1,7 +1,5 @@
 <%= render 'shared/errors', obj: @article %>
-  <div class="row form">
-    <div class="col-12">
-      <%= form_for @article do |f| %>
+      <%= form_for @article, class: "form-signup" do |f| %>
         <div class="form-group">
           <label for="title">
             <%= f.label :title %>
@@ -19,9 +17,8 @@
             <% cb.label(class: "form-check-label") {cb.check_box(class:"") + cb.text} %>
           <% end %>
         </div>
-        <%= f.submit class:"btn btn-primary" %> 
-        <%= link_to "Cancel", articles_path, class:"btn btn-danger" %>
+        <%= f.submit class:"btn btn-lg btn-primary btn-block" %> 
+        <br>
+        <%= link_to "Cancel", articles_path, class:"btn btn-sm btn-danger" %>
       <% end %>
-      
-    </div>
-  </div>
+   

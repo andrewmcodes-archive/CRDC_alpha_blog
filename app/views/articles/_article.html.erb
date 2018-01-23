@@ -1,16 +1,16 @@
-<div class="card-deck articles-list-cards">
   <% obj.each do |article| %>
     <div class="col-sm-12">
-      <div class="card">
+      <div class="card card-wrapper">
         <div class="card-header">
           <%= article.title %>
+          <p class="card-text"><small>Created by: <%= article.user.username if article.user %>,
+              last update <%= time_ago_in_words(article.updated_at) %> ago</small></p>
         </div>
         <div class="card-body">
           <%= truncate(article.description, length: 100) %>
-            <p><small>Created by: <%= article.user.username if article.user %>,
-              last update <%= time_ago_in_words(article.updated_at) %> ago</small></p>
+            
             <% if article.categories.any? %>
-              <p>Categories:
+              <p class="categories">Categories:
                 <%= render article.categories %>
               </p>
               <% end %>
@@ -24,4 +24,3 @@
       </div>
     </div>
     <% end %>
-</div>

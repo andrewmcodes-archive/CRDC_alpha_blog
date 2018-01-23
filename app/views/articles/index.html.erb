@@ -1,18 +1,10 @@
-<div class="container-fluid articles-list">
-  <div class="row">
-    <div class="col-12 ">
-      <h1 align="center" class="headline">
-        Listing all articles
-      </h1>
-      <div align="center">
-        <%= will_paginate(@articles, :renderer => WillPaginate::ActionView::Bootstrap4LinkRenderer, class: 'justify-content-center') %>
-
-      </div>
+<main class="container">
+  <div class="row show">
+    <div class="col-xs-12 col-sm-12 col-md-8 offset-md-2 col-lg-6 offset-lg-3">
+      <h1 class="h3 mb-3 font-weight-normal">All our articles</h1>
+      <div class="row card-row">
       <%= render 'article', obj: @articles %>
-        <div align="center">
-          <%= will_paginate(@articles, :renderer => WillPaginate::ActionView::Bootstrap4LinkRenderer, class: 'justify-content-center') %>
-
-        </div>
+    </div>
     </div>
   </div>
-</div>
+</main>

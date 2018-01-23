@@ -1,30 +1,28 @@
-<div class="container-fluid user__show">
-  <div class="row">
-    <div class="col-sm-8 offset-sm-2 col-md-6 offset-md-3">
-      <h1 align="center">
-        Listing all users
-      </h1>
-      <div class="card-deck user__card">
-        <div class="row">
+<main class="container">
+  <div class="row show">
+    <div class="col-xs-12 col-sm-12 col-md-8 offset-md-2 col-lg-6 offset-lg-3">
+      <h1 class="h3 mb-3 font-weight-normal">All our users</h1>
+      <div class="row card-row">
         <% @users.each do |user| %>
-          <div class="col-sm-12 col-md-6 col-lg-4">
-            <div class="card" align="center" >
+          <div class="col-sm-6 card-wrapper">
+            <div class="card">
               <%= link_to gravatar_for(user), user_path(user), class: 'card-img-top' %>
                 <div class="card-body">
                   <h5 class="card-title">
                     <%= link_to user.username, user_path(user) %>
                   </h5>
-                  <small class="text-muted"><%= pluralize(user.articles.count,"articles") if user.articles %></small>
-                  <br>
+                  <h6 class="card-subtitle mb-2 text-muted">
+                    <%= pluralize(user.articles.count,"articles") if user.articles %>
+                  </h6>
                   <% if logged_in? and current_user.admin? %>
                     <%= link_to "Delete this user", user_path(user), class:"btn btn-danger", method: :delete, data: { confirm: "Are you sure you want to delete the user and all their articles"} %>
-                      <% end %>
+                  <% end %>
                 </div>
             </div>
           </div>
           <% end %>
       </div>
-      </div>
     </div>
+    
   </div>
-</div>
+</main>

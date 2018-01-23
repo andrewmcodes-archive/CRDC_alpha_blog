@@ -1,19 +1,23 @@
-<div class="container-fluid form-a">
-  <div class="row">
-    <div class="col-sm-8 offset-sm-2">
-      <h1 align="center">
-        Listing all articles
-      </h1>
-      <%= will_paginate %>
-      <% @categories.each do |category| %>
-        <ul class="listing">
-          <li class="article-title">
-            <%= link_to "#{category.name}", category_path(category) %>
-          </li>
-          <li><small><%= pluralize(category.articles.count, "article") %></small></li>
-        </ul>
-        <% end %>
-        <%= will_paginate %>
+<main class="container">
+  <div class="row show">
+    <div class="col-xs-12 col-sm-12 col-md-8 offset-md-2 col-lg-6 offset-lg-3">
+      <h1 class="h3 mb-3 font-weight-normal">All Categories</h1>
+      <div class="row card-row">
+        <% @categories.each do |category| %>
+          <div class="col-sm-6 card-wrapper">
+            <div class="card">
+              <div class="card-body">
+                <h5 class="card-title">
+                  <%= link_to "#{category.name}", category_path(category) %>
+                </h5>
+                <h6 class="card-subtitle mb-2 text-muted">
+                  <%= pluralize(category.articles.count, "article") %>
+                </h6>
+              </div>
+            </div>
+          </div>
+          <% end %>
+      </div>
     </div>
   </div>
-</div>
+</main>
