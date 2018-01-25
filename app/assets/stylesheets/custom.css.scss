@@ -57,3 +57,24 @@
   }
 
 }
+.alert {
+  margin-top: 60px;
+}
+.navbar-nav {
+  .nav-item {
+    padding-left: 16px;
+  }
+}
+.footer {
+  text-align: center;
+  color: white;
+  padding: 1em 0;
+}
+.jumbotron {
+  height: 90vh;
+  text-align: center;
+  margin-bottom: 0 !important;
+  .display-4 {
+    padding-top: 2em;
+  }
+}
