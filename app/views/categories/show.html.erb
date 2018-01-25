@@ -1,7 +1,7 @@
 <main class="container">
   <div class="row show">
     <div class="col-xs-12 col-md-8 offset-md-2 col-lg-6 offset-lg-3">
-      <h1 class="h3 mb-3 font-weight-normal">All categories</h1>
+      <h1 class="h3 mb-3 font-weight-normal text-white">All articles in category</h1>
       <div align="center">
         <% if logged_in? and current_user.admin? %>
         <span class="badge"><%= link_to "Edit category name", edit_category_path(@category) %></span>

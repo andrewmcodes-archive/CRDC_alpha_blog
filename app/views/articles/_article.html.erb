@@ -8,9 +8,10 @@
         </div>
         <div class="card-body">
           <%= truncate(article.description, length: 100) %>
-            
+          <br>
+            <%= link_to "View Full Article", article_path(article), class: "btn btn-primary view-articles" %>
             <% if article.categories.any? %>
-              <p class="categories">Categories:
+              <p class="card-categories">Categories:
                 <%= render article.categories %>
               </p>
               <% end %>

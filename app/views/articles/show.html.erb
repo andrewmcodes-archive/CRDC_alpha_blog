@@ -1,7 +1,7 @@
 <main class="container">
   <div class="row show">
     <div class="col-xs-12 col-md-8 offset-md-2 col-lg-6 offset-lg-3">
-      <h1 class="h3 mb-3 font-weight-normal">All our articles</h1>
+      <!--<h1 class="h3 mb-3 font-weight-normal">All our articles</h1>-->
         <% if @article.user %>
           <div class="card">
             <%= link_to gravatar_for(@article.user), user_path(@article.user), class: "card-img-top" %>
@@ -16,7 +16,7 @@
       </div>
     </div>
     
-    <div class="col-lg-10 col-md-9">
+    <div class="col-sm-8 offset-sm-2">
       <div class="card">
         <h5 class="card-header">Title:
           <%= @article.title %>
@@ -44,5 +44,5 @@
 
       </div>
     </div>
-  </div>
-</div>
+
+</main>
