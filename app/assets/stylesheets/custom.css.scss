@@ -23,7 +23,7 @@ body {
 .text-white {
   color: #fff;
 }
-.show {
+.show-wrapper {
     margin-top: 56px;
     text-align: center;
     padding-top: 2rem;
@@ -126,4 +126,21 @@ body {
 }
 .card-categories {
   margin-bottom: 0;
+}
+main {
+  &.container {
+    margin-bottom: 6em !important;
+  }
+}
+.check-scroll {
+  height: 75px;
+  overflow: auto;
+  width: 400px;
+  margin: 1em auto;
+  .form-check-label {
+    padding-right: 16px;
+    input {
+      margin-right: 8px;
+    }
+  }
 }

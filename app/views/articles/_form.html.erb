@@ -12,10 +12,12 @@
           </label>
           <%= f.text_area :description, class:"form-control", id:"description", placeholder:"Description" %>
         </div>
-        <div class="form-check form-check-inline">
+        <div class="check-scroll">
+        <div class="form-check">
           <%= f.collection_check_boxes :category_ids, Category.all, :id, :name do |cb| %>
             <% cb.label(class: "form-check-label") {cb.check_box(class:"") + cb.text} %>
           <% end %>
+        </div>
         </div>
         <%= f.submit class:"btn btn-lg btn-primary btn-block" %> 
         <br>
